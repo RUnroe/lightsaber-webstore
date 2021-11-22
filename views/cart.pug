@@ -1,0 +1,12 @@
+extends layout
+block content
+    h1 Cart
+    section(id="cart_body")
+        section(id="cartItemsContainer")
+        div(id="cartCheckoutDiv")
+            div(id="totalPrice") $0
+            a(href="/order")
+                div(id="checkout" class="btn") Checkout
+    script(src="/scripts/cart.js")
+    script(src="/scripts/localCart.js")
+    script(src="/scripts/pageTransition.js")

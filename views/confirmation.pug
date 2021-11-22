@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    section(id="confirmation_body")
+        h1 Thank you 
+            span(id="nameSpan" data-name=name)=name
+        h2 Your order has been placed
+        section(id="confirmationInfo")
+            p(id="orderConfirmationCode")
+            a(href="/")
+                div(class="btn") Back to home
+    script(src="scripts/confirmation.js")
+    script(src="/scripts/pageTransition.js")

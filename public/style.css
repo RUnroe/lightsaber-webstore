@@ -1,0 +1,905 @@
+/*======================================= 
+                Theme
+=========================================*/
+
+:root {
+    --color-bg: #fff;
+    --color-primary: #fff;
+    --color-text: #222;
+    --box-shadow: rgba(181,191,199,0.3);
+    --color-text-highlight: #f00;
+    --color-btn-highlight: #4bf;
+    --color-border: #222;
+    --color-table: #fff;
+    --color-table-even: #eee;
+}
+
+
+[data-theme="dark"] {
+    --color-bg: #111;
+    --color-primary: #222;
+    --color-text: #fff;
+    --box-shadow: rgba(116, 105, 105, 0.4);
+    --color-text-highlight: #4bf;
+    --color-btn-highlight: #f00;
+    --color-border: #888;
+    --color-table: #111;
+    --color-table-even: #303030;
+
+
+}
+
+/*======================================= 
+                General
+=========================================*/
+
+@font-face {
+    font-family: "jedi";
+    src: url("Starjedi.ttf");
+  }
+  
+html {
+    margin:0;
+    padding: 0; 
+    scroll-behavior: smooth;
+    height:100%;
+}
+
+body{
+    margin:0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--color-bg);
+    transition: color 0.5s ease, background-color 0.5s ease;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+#main_section {
+    background-color: var(--color-bg);
+    width:100%;
+    height:100%;
+    transition: color 0.5s ease, background-color 0.5s ease;
+    overflow:hidden;
+
+}
+
+h1 {
+    margin:0;
+    padding:2vh 2vw;
+    font-size: 2em;
+    color: var(--color-text);
+    transition: color 0.5 ease;
+
+}
+/*======================================= 
+                Header
+=========================================*/
+
+header {
+    margin:0;
+    overflow:hidden;
+}
+#staticBG {
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.3)), url("images/jediFight.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:60vh;
+    width:100%;
+    position:fixed;
+    z-index:-1;
+    top:-20%;
+}
+#title {
+    text-align: center;
+    line-height: 30vh;
+    margin:0;
+    color:#ff3;
+    font-size: 7vw;
+    letter-spacing: 0.2em;
+    font-family: "jedi";
+    
+}
+
+/*======================================= 
+                Nav Bar
+=========================================*/
+nav {
+    position: sticky;
+    top:0;
+    z-index:5;
+}
+nav > ul{
+    list-style: none;
+    padding:0 0.5em;
+    background-color: #222;
+    margin:0;
+}
+nav > ul > li {
+    display:inline-block;
+    height:100%;
+}
+
+nav > ul > li:last-child {
+    float:right;
+}
+
+nav > ul > li > a {
+    display:block;
+    padding:1.2em;
+    width:5em;
+    text-align: center;
+    height:100%;
+    text-decoration: none;
+    color:white;
+    transition: background-color 0.2s;
+    box-sizing: content-box;
+
+}
+
+nav > ul > li > a:hover {
+    background-color: #333;
+    
+}
+
+#menuBtn {
+    display:none;
+    height:60px;
+    width:60px;
+    right:0;
+    top:0;
+    position:absolute;
+    z-index: 2;
+
+}
+#menuBtn > div {
+    width: 30px;
+    position:relative;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+.menuBar {
+    width:100%;
+    background-color: #ff4;
+    border-radius: 10%;
+    height:1.5px;
+}
+.menuBar.mid{
+    margin:5px 0;
+}
+
+
+/*======================================= 
+                Footer
+=========================================*/
+
+footer {
+    text-align:center;
+    background-color: #222;
+    color:white;
+}
+
+footer > p {
+    line-height: 2em;
+    padding:1em 0;
+    margin:0;
+}
+
+/*======================================= 
+                Home Page
+=========================================*/
+#home_body {
+    background-color: var(--color-bg);
+    transition: color 0.5s ease, background-color 0.5s ease;
+}
+
+#saberContainer {
+    padding:6em 10% 2em 10%;
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    overflow: hidden;
+    height: 100%;
+}
+
+#saberContainer > a {
+    text-decoration: none;
+    margin: 0 1em 2em 1em;
+    overflow: hidden;
+    display: block;
+    transition: transform 0.2s, height 0.8s ease, color 0.5s ease, background-color 0.5s ease;
+    height:0;
+    min-width: 15em;
+    max-width: 15em;
+    box-shadow: 10px 10px 40px 2px var(--box-shadow);
+    flex:1;
+    color: var(--color-text);
+    background-color: var(--color-primary);
+
+    
+}  
+
+#saberContainer > a:hover {
+    transform: scale(1.03);
+
+}
+
+#saberContainer > a > div {
+    position: relative;
+    height: 100%;
+    transition: height 1s;
+   
+}
+#sith_1 .saberImage{
+    background-position-y: center;
+}
+#sith_2 .saberImage{
+    background-size: 90%;
+}
+.saberImage {
+    height:75%;
+    background-repeat: no-repeat;
+    background-size:25%;
+    background-position-x: center;
+    background-position-y: bottom;
+}
+#saberContainer > a > div > div:last-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height:25%;
+    text-align: center;
+    font-size: 1.3em;
+    padding:0 1em;
+    border-top: 1px solid #ccc;
+    
+}
+
+
+#changeThemeText {
+    text-align:center;
+    margin:1em 0;
+    color:#aaa;
+    opacity: 0;
+    transition: color 0.2s, opacity 0.4s;
+    cursor: pointer;
+}
+
+#changeThemeText:hover {
+    color: var(--color-text-highlight);
+}
+
+
+/*======================================= 
+                Features Page
+=========================================*/
+
+#features_body {
+    display:flex;
+    height:100%;
+    padding: 1em 1em 2em 1em;
+    background-color: var(--color-bg);
+
+}
+
+#features_body > section:first-child {
+    flex:3;
+    padding:0 1em 1em 1em;
+    text-align: center;
+    
+}
+
+#features_body > section:first-child > div{
+    position: relative;
+    height:22em;
+    width: 15em;
+    margin: auto;
+    box-shadow: 10px 10px 40px 2px var(--box-shadow);
+    overflow:hidden;
+    text-align:center;
+    background-color: var(--color-primary);
+}
+
+#features_image {
+    position: absolute;
+    height:125%;
+    bottom:0;
+    transform: translateX(-50%);
+    background-color: var(--color-primary);
+}
+
+#features_image.center {
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+#features_body > section:last-child {
+    flex:7;
+    padding-top:1em;
+}
+
+table {
+    width:80%;
+    margin:auto;
+    background-color: var(--color-table);
+    color: var(--color-text);
+}
+tr:nth-child(even) {
+    background-color: Var(--color-table-even);
+}
+
+#features_table > section, #custom_table > section {
+    margin-top: 4em;
+    text-align: right;
+    padding-right: 10%;
+}
+
+.btn {
+    padding:1em 1.5em;
+    border:1px solid var(--color-border);
+    transition: background-color 0.2s ease, color 0.2s ease;
+    display:inline-block;
+    color: var(--color-text);
+    user-select: none;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--color-btn-highlight);
+    color: #fff;
+}
+#price {
+    display:inline;
+    margin:0 2em;
+    color: var(--color-text);
+}
+
+#addedToCartMessage {
+    position: fixed;
+    text-align: center;
+    width:100%;
+    background-color: #4bf;
+    top:0;
+    font-size: 1.1em;
+    font-weight: bold;
+    color:white;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.4s ease;
+}
+#addedToCartMessage > p > a {
+    color:#ff4;
+}
+
+/*======================================= 
+                Custom Page
+=========================================*/
+
+#customSaberContainer {
+    position:relative;
+    transform: translateX(-50%);
+    left:50%;
+    display: flex;
+    margin-top:2em;
+}
+
+
+#customSaberGrid {
+    height:45vh;
+    margin:auto;
+    display:grid;
+    grid-template-columns: 3.5em 250px 3.5em;
+    grid-template-rows: 1fr 3fr 4fr;
+    grid-template-areas:
+    'slider slider slider' 
+    ' . customSaberDisplay . '
+    'moveLeft customSaberDisplay moveRight';
+    grid-gap:2em;
+}
+
+#colorSliderContainer {
+    grid-area: slider;
+    padding:0 3em;
+}
+
+#colorSlider {
+    width:100%;
+    position: relative;
+    top:50%;
+
+}
+
+.arrowBtn {
+    border:1px solid black;
+    color: #222;
+    background-color: #fff;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    user-select: none;
+}
+
+.arrowBtn.active {
+    cursor: pointer;
+}
+
+.arrowBtn.active:hover {
+    color: white;
+    background-color: #4bf;
+}
+
+.arrowBtn.disabled, .incrementQuantityBtn.disabled, .decrementQuantityBtn.disabled {
+    color: #777;
+    background-color: #fafafa;
+    border-color: #777;
+    cursor: initial;
+}
+
+.arrowBtn > p {
+    position:relative;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-weight: bold;
+    margin:0;
+    font-size: 1.7em;
+}
+
+
+#customSaberDisplay {
+    grid-area: customSaberDisplay;
+    position: relative;
+    overflow:hidden;
+    display:grid;
+    grid-template-areas: 'blade' 'handle';
+    box-shadow: 10px 10px 40px 2px #77777722;
+
+}
+
+#saberBladeContainer {
+    grid-area: blade;
+    width:250px;
+
+
+}
+
+#saberBlade {
+    height:135%;
+    position:relative;
+    left:50%;
+    top:-20%;
+    transform: translateX(-50%);
+    width:8px;
+    background-color: white;
+    border-radius:10px;
+    
+    
+}
+
+#saberHandleImgContainer {
+    grid-area: handle;
+    display:flex;
+    position:relative;
+    transition-duration: 0.6s;
+    transition-timing-function: ease-in-out;
+    left:0;
+    z-index:10;
+    
+}
+
+.saberHandleImgDiv {
+    width: 250px;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#moveLeft {
+    grid-area: moveLeft;
+}
+
+#moveRight {
+    grid-area: moveRight;
+}
+
+
+#custom_table {
+    margin:5em 0 3em 0;
+}
+
+#colorSliderLabel {
+    font-weight: bold;
+    text-align: center;
+    margin-bottom:0;
+}
+
+/*======================================= 
+                Cart Page
+=========================================*/
+
+#cart_body {
+    min-height: 45vh;
+    position: relative;
+}
+
+#cartCheckoutDiv {
+    width:70%;
+    margin: 3em auto 2em auto;
+    text-align: right;
+}
+
+#checkout{
+   display: inline-block;
+}
+
+#totalPrice {
+    display:inline-block;
+    margin-right:2em;
+}
+
+#cartItemsContainer {
+    width: 70%;
+    margin: 0 auto;
+}
+#cartItemsContainer > div {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding:1.5em 0;
+}
+
+#cartItemsContainer > div:not(:first-child) {
+    border-top: 1px solid #999;
+}
+
+.cartDivImg {
+    flex: 1;
+    min-width: 3em;
+    max-width: 3em;
+    background-repeat: no-repeat;
+    background-size:25%;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+#sith_2 .cartDivImg {
+    background-size:90%;
+}
+.cartDivName {
+    flex: 10;
+    padding:1em;
+}
+
+.cartDivPrice {
+    padding: 1em;
+    flex: 2;
+    text-align: right;
+}
+
+.cartDivQuantityContainer {
+    flex:2;
+    display:flex;
+}
+
+.cartDivQuantityContainer > div {
+    flex: 1;
+}
+
+.cartDivQuantityDisplay {
+    padding:1em;
+    text-align: center;
+}
+
+.cartDivButtonContainer {
+    display:flex;
+    flex-direction: column;
+
+}
+
+.cartDivButtonContainer > div {
+    padding: 0.3em;
+    min-width:2em;
+    max-width: 2em;
+    flex: 1;
+    background-color: white;
+    border:1px solid #999;
+    text-align:center;
+    color:black;
+    font-weight: bold;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    user-select: none;
+}
+
+.cartDivButtonContainer > div:not(.disabled):hover {
+    background-color: #4bf;
+    color:white;
+
+}
+
+.incrementQuantityBtn {
+    border-bottom: 1px solid black;
+}
+
+
+.cartDivCancelBtn {
+    flex:1;
+    margin: 1em;
+    color:#222;
+    text-align: center;
+    transition: color 0.2s ease;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+}
+
+.cartDivCancelBtn:hover {
+    color:#f00;
+}
+
+
+#emptyCartText {
+    font-size: 1.8em;
+    position: relative;
+    top:50%;
+    display:block;
+    text-align: center;
+}
+
+/*======================================= 
+                Order Page
+=========================================*/
+
+#cartContainer {
+    width: 70%;
+    margin:1em auto 3em auto;
+}
+
+#cartContainer > div {
+    display: flex;
+    margin:1em 0;
+}
+
+.orderCartName {
+    flex:15;
+    padding:0.5em;
+
+}
+
+.orderCartQuantity {
+    flex:1;
+    padding:0.5em;
+    border-left: 1px solid #ccc;
+    text-align: center;
+}
+
+#cartContainer > div:last-child {
+    border-top:1px solid black;
+    padding-top:0.5em;
+    font-weight: bold;
+
+}
+
+#cartContainer > div:first-child {
+    font-weight: bold;
+}
+
+#cartContainer > div:first-child .orderCartQuantity {
+    text-align: right;
+}
+#cartContainer > div:last-child .orderCartQuantity {
+    border:none;
+}
+
+#formContainer {
+    padding:1em;
+
+}
+#formContainer > form {
+    margin: 0 auto;
+    max-width: 500px;
+    width: 100%;
+    min-height:50vh;
+}
+#formContainer > form > section {
+    text-align: center;
+    display:grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+#formContainer > form > section > label{ 
+    text-align:left;
+}
+.errorMsg {
+    grid-column: 2;
+    font-weight: bold;
+    text-align: left;
+    color:#f00;
+}
+#formSubmit {
+    margin: 1em auto;
+    display:block;
+    background-color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: initial;
+}
+#formSubmit:hover {
+    background-color: #4bf;
+}
+
+#headErrMsg {
+    margin-left:33%;
+}
+
+.red {
+    border: 2px solid #f00;
+}
+
+.green {
+    border:2px solid #0e2;
+}
+
+
+/*======================================= 
+                Confirmation
+=========================================*/
+
+#confirmation_body {
+    padding:3em 1em;
+    position: relative;
+    width:75vw;
+    min-height:45vh;
+    margin:auto;
+}
+
+#confirmation_body > h1, #confirmation_body > h2 {
+    font-weight: normal;
+    padding: initial;
+}
+
+#nameSpan {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+#confirmationInfo {
+    display:flex;
+    flex-direction: row;
+    position: absolute;
+    bottom:3em;
+    width:100%;
+    
+}
+
+#confirmationInfo > p {
+    flex: 1;
+}
+
+#confirmationInfo > a {
+    text-align: right;
+    flex:1;
+}
+
+/*======================================= 
+                Responsive
+=========================================*/
+
+@media screen and (max-width: 600px) {
+   
+    header {
+        background-color: #222;
+        position: fixed;
+        width:100%;
+        z-index: 5;
+    }
+
+    body {
+        height: 100%;
+    }
+    #staticBG {
+        visibility: hidden;
+    }
+
+    #title {
+        text-align:left;
+        padding-left:1em;
+        line-height: 40px;
+        font-size: 1.5em;
+        padding: 10px 0 10px 1em;
+    }
+    
+    #menuBtn {
+        display:block;
+    }
+
+    nav {
+        position: fixed;
+        width:100%;
+        top:60px;
+        height:0;
+        transition: height 0.5s;
+        overflow: hidden;
+        z-index: 5;
+    }
+
+    #main_section {
+        padding-top:60px;
+        height: initial;
+    }
+
+    nav > ul > li {
+        display: block;
+    }
+
+    nav > ul > li > a {
+        width: 100%;
+        padding: 1em 0;
+    }
+
+    #features_body {
+        flex-direction: column;
+        width:100%;
+        padding:0;
+    }
+
+    #features_table > section {
+        margin:3em 0;
+    }
+
+
+
+    nav > ul > li:last-child {
+        float:none;
+    }
+
+    #cartItemsContainer {
+        width:94%;
+    }
+
+    #cartContainer {
+        width: 94%;
+    }
+    #confirmation_body {
+        min-height: 67vh;
+        padding:2em 1em;
+
+    }
+
+    #confirmationInfo {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    #confirmationInfo > a {
+        text-align: center;
+        margin:1em 0;
+    }
+    
+    
+    #customSaberGrid { 
+        grid-gap:5px;
+    }
+
+    #colorSlider {
+        top:0;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    #cartItemsContainer > div {
+        flex-wrap: wrap;
+    }
+    .cartDivName {
+        flex-basis:60%;
+    }
+
+    
+    #confirmation_body {
+        width:100vw;
+    }
+}

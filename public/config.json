@@ -1,0 +1,101 @@
+{
+    "menu": [
+        ["Home", "/"],
+        ["Custom", "/custom"],
+        ["Cart", "/cart"]
+    ],
+    
+
+    "saber": {
+        "jedi": [
+            {
+                "id": "jedi_0",
+                "color": "Green",
+                "weight": "4.5",
+                "owner": "Qui Gon Jinn",
+                "hilt_length": "28.5",
+                "price": "$5499.99",
+                "culture": "Jedi",
+                "img_url": "/images/jedi/0.png",
+                "alignment": "normal"
+            },
+            {
+                "id": "jedi_1",
+                "color": "Blue",
+                "weight": "4.6",
+                "owner": "Obi-Wan Kenobi",
+                "hilt_length": "28",
+                "price": "$4999.99",
+                "culture": "Jedi",
+                "img_url": "/images/jedi/1.png",
+                "alignment": "normal"
+            },
+            {
+                "id": "jedi_2",
+                "color": "Purple",
+                "weight": "4.4",
+                "owner": "Mace Windu",
+                "hilt_length": "28",
+                "price": "$5999.99",
+                "culture": "Jedi",
+                "img_url": "/images/jedi/2.png",
+                "alignment": "normal"
+            },
+            {
+                "id": "jedi_3",
+                "color": "Green",
+                "weight": "2.4",
+                "owner": "Yoda",
+                "hilt_length": "14",
+                "price": "$4999.99",
+                "culture": "Jedi",
+                "img_url": "/images/jedi/3.png",
+                "alignment": "normal"
+            }
+        ],
+        "sith": [
+            {
+                "id": "sith_0",
+                "color": "Red",
+                "weight": "4.7",
+                "owner": "Darth Vader",
+                "hilt_length": "28",
+                "price": "$4999.99",
+                "culture": "Sith",
+                "img_url": "/images/sith/0.png",
+                "alignment": "normal"
+            },
+            {
+                "id": "sith_1",
+                "color": "Red",
+                "weight": "8.8",
+                "owner": "Darth Maul",
+                "hilt_length": "52",
+                "price": "$5999.99",
+                "culture": "Sith",
+                "img_url": "/images/sith/1.png",
+                "alignment": "center"
+            },
+            {
+                "id": "sith_2",
+                "color": "Red",
+                "weight": "6.4",
+                "owner": "Kylo Ren",
+                "hilt_length": "29.8",
+                "price": "$5499.99",
+                "culture": "Sith",
+                "img_url": "/images/sith/2.png",
+                "alignment": "normal"
+            }
+        ],
+        "custom": [
+            {
+                "id": "custom_0",
+                "owner": "You",
+                "price": "$7499.99",
+                "img_url": "/images/custom/0.png",
+                "alignment": "normal"
+            }
+        ]
+    }
+}

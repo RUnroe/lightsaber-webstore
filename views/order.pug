@@ -1,0 +1,34 @@
+extends layout
+block content
+    h1 Order
+    section(id="order_body")
+        section(id="cartContainer")
+            div
+                div(class="orderCartName") Item
+                div(class="orderCarQuantity") Quantity
+        section(id="formContainer")
+            form(id="form" method="post" action="/confirmation" onsubmit="return submitForm()")
+                p(class="errorMsg" id="headErrMsg") Please fill out all of the red fields!
+                section(id="name_section")
+                    label(for="name") Name :
+                    input(type="text" name="name" id="name")
+                    p(class="errorMsg") Name is too short
+
+                section(id="address_section")
+                    label(for="address") Address :
+                    input(type="text" name="address" id="address")
+                    p(class="errorMsg") Not a valid address
+
+                section(id="phone_section")
+                    label(for="phone") Phone :
+                    input(type="number" name="phone" id="phone")
+                    p(class="errorMsg") Not a valid phone number
+            
+                section(id="email_section")
+                    label(for="email") Email :
+                    input(type="email" name="email" id="email")
+                    p(class="errorMsg") Not a valid email address
+                    
+                input(type="submit" value="Order Now" id="formSubmit" class="btn")
+    script(src="/scripts/order.js")
+    script(src="/scripts/pageTransition.js")

@@ -1,0 +1,34 @@
+extends layout
+
+block content
+    h1 Features
+    section(id="features_body")
+        section(id="image")
+            div
+                img(src=img_url id="features_image" class=alignment)
+        section(id="features_table")
+            table
+                tr
+                    td Culture
+                    td(id="culture")=culture
+                tr
+                    td Owner
+                    td=owner
+                tr
+                    td Color
+                    td=color
+                tr
+                    td Weight
+                    td=weight + " kg"
+                tr
+                    td Hilt Length
+                    td=hilt_length + " cm"
+            section
+                p(id="price")=price
+                div(id="addToCart" class="btn" data-product-id=id) Add To Cart
+    div(id="addedToCartMessage")
+        p Item has been added to 
+            a(href="/cart") cart
+    script(src="/scripts/features.js")
+    script(src="/scripts/localCart.js")
+    script(src="/scripts/pageTransition.js")

@@ -1,0 +1,46 @@
+extends layout
+
+block content
+    section(id="custom_body")
+        h1 Customize Your Own Lightsaber
+        section(id="customSaberContainer")
+            div(id="customSaberGrid")
+                div(id="colorSliderContainer")
+                    p(id="colorSliderLabel") Color
+                    input(type="range" min="0" max="359" value="0" id="colorSlider")
+                div(id="moveLeft" class="arrowBtn disabled")
+                    p &lt;
+                div(id="customSaberDisplay")
+                    div(id="saberBladeContainer")
+                        div(id="saberBlade")
+                div(id="moveRight" class="arrowBtn active")
+                    p &gt;
+        section(id="custom_table")
+            table
+                tr
+                    td Culture
+                    td(id="culture") Custom
+                tr
+                    td Owner
+                    td You
+                tr
+                    td Color
+                    td(id="color") 
+                tr
+                    td Weight
+                    td(id="weight")
+                tr
+                    td Hilt Length
+                    td(id="hilt_length")
+            section
+                p(id="price")=price
+                div(id="addToCart" class="btn" data-product-id="custom_0") Add To Cart
+    div(id="addedToCartMessage")
+        p Item has been added to 
+            a(href="/cart") cart
+
+    script(src="/scripts/custom.js")
+    script(src="/scripts/localCart.js")
+    script(src="/scripts/pageTransition.js")
+
+
